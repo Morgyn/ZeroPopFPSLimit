@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2FE751CE-6F92-4F5C-8712-DD097EBE13CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_ZeroPopFPSLimit</RootNamespace>
+    <AssemblyName>ZeroPopFPSLimit</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <AssemblySearchPaths>..\..\..\Documents\Rust DLLs;$(AssemblySearchPaths)</AssemblySearchPaths>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DoNotCopyLocalIfInGac>true</DoNotCopyLocalIfInGac>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Target Name="ClearReferenceCopyLocalPaths" AfterTargets="ResolveAssemblyReferences">
+    <ItemGroup>
+      <ReferenceCopyLocalPaths Remove="@(ReferenceCopyLocalPaths)" />
+    </ItemGroup>
+  </Target>
+  <ItemGroup>
+    <Reference Include="0Harmony" />
+    <Reference Include="ZeroPopFPSLimit" />
+    <Reference Include="Assembly-CSharp-firstpass" />
+    <Reference Include="Assembly-CSharp" />
+    <Reference Include="Azure.Core" />
+    <Reference Include="Azure.Storage.Blobs" />
+    <Reference Include="Azure.Storage.Common" />
+    <Reference Include="Cinemachine" />
+    <Reference Include="Cronos" />
+    <Reference Include="CurvedTextMeshPro" />
+    <Reference Include="DelaunayER" />
+    <Reference Include="DnsClient" />
+    <Reference Include="EZhex1991.EZSoftBone" />
+    <Reference Include="EasyRoads3Dv3" />
+    <Reference Include="Facepunch.BurstCloth" />
+    <Reference Include="Facepunch.Console" />
+    <Reference Include="Facepunch.Flexbox" />
+    <Reference Include="Facepunch.GoogleSheets" />
+    <Reference Include="Facepunch.Input" />
+    <Reference Include="Facepunch.Network" />
+    <Reference Include="Facepunch.Nexus" />
+    <Reference Include="Facepunch.Ping" />
+    <Reference Include="Facepunch.Raknet" />
+    <Reference Include="Facepunch.Rcon" />
+    <Reference Include="Facepunch.Skeleton" />
+    <Reference Include="Facepunch.Sqlite" />
+    <Reference Include="Facepunch.SteamNetworking" />
+    <Reference Include="Facepunch.Steamworks.Win64" />
+    <Reference Include="Facepunch.System" />
+    <Reference Include="Facepunch.Unity" />
+    <Reference Include="Facepunch.UnityEngine" />
+    <Reference Include="Facepunch.UnwrapBaker.Settings" />
+    <Reference Include="Fleck" />
+    <Reference Include="GA" />
+    <Reference Include="I18N.CJK" />
+    <Reference Include="I18N.MidEast" />
+    <Reference Include="I18N.Other" />
+    <Reference Include="I18N.Rare" />
+    <Reference Include="I18N.West" />
+    <Reference Include="I18N" />
+    <Reference Include="Ionic.Zip.Reduced" />
+    <Reference Include="LZ4" />
+    <Reference Include="LZ4pn" />
+    <Reference Include="MP3Sharp" />
+    <Reference Include="Melanchall.DryWetMidi" />
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces" />
+    <Reference Include="Microsoft.Win32.Registry" />
+    <Reference Include="MidiJack" />
+    <Reference Include="Mono.Cecil.Mdb" />
+    <Reference Include="Mono.Cecil.Pdb" />
+    <Reference Include="Mono.Cecil.Rocks" />
+    <Reference Include="Mono.Cecil" />
+    <Reference Include="Mono.Data.Sqlite" />
+    <Reference Include="Mono.Data.Tds" />
+    <Reference Include="Mono.Security" />
+    <Reference Include="MySql.Data" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="Oxide.CSharp" />
+    <Reference Include="Oxide.Common" />
+    <Reference Include="Oxide.Core" />
+    <Reference Include="Oxide.MySql" />
+    <Reference Include="Oxide.References" />
+    <Reference Include="Oxide.Rust" />
+    <Reference Include="Oxide.SQLite" />
+    <Reference Include="Oxide.Unity" />
+    <Reference Include="RTLTMPro" />
+    <Reference Include="Rust.Clans.Local" />
+    <Reference Include="Rust.Clans" />
+    <Reference Include="Rust.Data" />
+    <Reference Include="Rust.Demo" />
+    <Reference Include="Rust.FileSystem" />
+    <Reference Include="Rust.Global" />
+    <Reference Include="Rust.Harmony" />
+    <Reference Include="Rust.Localization" />
+    <Reference Include="Rust.Platform.Common" />
+    <Reference Include="Rust.Platform.Steam" />
+    <Reference Include="Rust.Platform" />
+    <Reference Include="Rust.UI" />
+    <Reference Include="Rust.Workshop" />
+    <Reference Include="Rust.World" />
+    <Reference Include="SingularityGroup.HotReload.Runtime.Public" />
+    <Reference Include="SingularityGroup.HotReload.Runtime" />
+    <Reference Include="System.Buffers" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.SQLite" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Diagnostics.DiagnosticSource" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Hashing" />
+    <Reference Include="System.Memory.Data" />
+    <Reference Include="System.Memory" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics.Vectors" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel.Internals" />
+    <Reference Include="System.Text.Encodings.Web" />
+    <Reference Include="System.Text.Json" />
+    <Reference Include="System.Threading.Channels" />
+    <Reference Include="System.Threading.Tasks.Extensions" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System" />
+    <Reference Include="TimeZoneConverter" />
+    <Reference Include="UIEffect" />
+    <Reference Include="Unity.AI.Navigation" />
+    <Reference Include="Unity.Burst.Unsafe" />
+    <Reference Include="Unity.Burst" />
+    <Reference Include="Unity.Mathematics" />
+    <Reference Include="Unity.MemoryProfiler" />
+    <Reference Include="Unity.Recorder.Base" />
+    <Reference Include="Unity.Recorder" />
+    <Reference Include="Unity.TerrainTools" />
+    <Reference Include="Unity.TextMeshPro" />
+    <Reference Include="Unity.Timeline" />
+    <Reference Include="UnityEngine.AIModule" />
+    <Reference Include="UnityEngine.ARModule" />
+    <Reference Include="UnityEngine.AccessibilityModule" />
+    <Reference Include="UnityEngine.AndroidJNIModule" />
+    <Reference Include="UnityEngine.AnimationModule" />
+    <Reference Include="UnityEngine.AssetBundleModule" />
+    <Reference Include="UnityEngine.AudioModule" />
+    <Reference Include="UnityEngine.ClothModule" />
+    <Reference Include="UnityEngine.ClusterInputModule" />
+    <Reference Include="UnityEngine.ClusterRendererModule" />
+    <Reference Include="UnityEngine.ContentLoadModule" />
+    <Reference Include="UnityEngine.CoreModule" />
+    <Reference Include="UnityEngine.CrashReportingModule" />
+    <Reference Include="UnityEngine.DSPGraphModule" />
+    <Reference Include="UnityEngine.DirectorModule" />
+    <Reference Include="UnityEngine.GIModule" />
+    <Reference Include="UnityEngine.GameCenterModule" />
+    <Reference Include="UnityEngine.GridModule" />
+    <Reference Include="UnityEngine.HotReloadModule" />
+    <Reference Include="UnityEngine.IMGUIModule" />
+    <Reference Include="UnityEngine.ImageConversionModule" />
+    <Reference Include="UnityEngine.InputLegacyModule" />
+    <Reference Include="UnityEngine.InputModule" />
+    <Reference Include="UnityEngine.JSONSerializeModule" />
+    <Reference Include="UnityEngine.LocalizationModule" />
+    <Reference Include="UnityEngine.NVIDIAModule" />
+    <Reference Include="UnityEngine.ParticleSystemModule" />
+    <Reference Include="UnityEngine.PerformanceReportingModule" />
+    <Reference Include="UnityEngine.Physics2DModule" />
+    <Reference Include="UnityEngine.PhysicsModule" />
+    <Reference Include="UnityEngine.ProfilerModule" />
+    <Reference Include="UnityEngine.PropertiesModule" />
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule" />
+    <Reference Include="UnityEngine.ScreenCaptureModule" />
+    <Reference Include="UnityEngine.SharedInternalsModule" />
+    <Reference Include="UnityEngine.SpriteMaskModule" />
+    <Reference Include="UnityEngine.SpriteShapeModule" />
+    <Reference Include="UnityEngine.StreamingModule" />
+    <Reference Include="UnityEngine.SubstanceModule" />
+    <Reference Include="UnityEngine.SubsystemsModule" />
+    <Reference Include="UnityEngine.TLSModule" />
+    <Reference Include="UnityEngine.TerrainModule" />
+    <Reference Include="UnityEngine.TerrainPhysicsModule" />
+    <Reference Include="UnityEngine.TextCoreFontEngineModule" />
+    <Reference Include="UnityEngine.TextCoreTextEngineModule" />
+    <Reference Include="UnityEngine.TextRenderingModule" />
+    <Reference Include="UnityEngine.TilemapModule" />
+    <Reference Include="UnityEngine.UI" />
+    <Reference Include="UnityEngine.UIElementsModule" />
+    <Reference Include="UnityEngine.UIModule" />
+    <Reference Include="UnityEngine.UmbraModule" />
+    <Reference Include="UnityEngine.UnityAnalyticsCommonModule" />
+    <Reference Include="UnityEngine.UnityAnalyticsModule" />
+    <Reference Include="UnityEngine.UnityConnectModule" />
+    <Reference Include="UnityEngine.UnityCurlModule" />
+    <Reference Include="UnityEngine.UnityTestProtocolModule" />
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule" />
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule" />
+    <Reference Include="UnityEngine.UnityWebRequestModule" />
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule" />
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule" />
+    <Reference Include="UnityEngine.VFXModule" />
+    <Reference Include="UnityEngine.VRModule" />
+    <Reference Include="UnityEngine.VehiclesModule" />
+    <Reference Include="UnityEngine.VideoModule" />
+    <Reference Include="UnityEngine.VirtualTexturingModule" />
+    <Reference Include="UnityEngine.WindModule" />
+    <Reference Include="UnityEngine.XRModule" />
+    <Reference Include="UnityEngine" />
+    <Reference Include="ZString" />
+    <Reference Include="mscorlib" />
+    <Reference Include="netstandard" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ZeroPopFPSLimit.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
